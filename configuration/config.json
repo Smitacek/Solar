@@ -1,0 +1,4 @@
+{
+  "name": "serial port",
+  "port": "/dev/tty."
+}
