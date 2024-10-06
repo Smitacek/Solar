@@ -74,3 +74,7 @@ if __name__ == '__main__':
         "timeout": 3
     })
     port.open()
+    port.write(b'QPIWS')
+    print(port.readline())
+    print(port.readline())
+    port.close()
