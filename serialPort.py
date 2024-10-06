@@ -64,7 +64,7 @@ class SerialPort:
                 bit = (byte >> (7 - i)) & 1
                 bit_list.append(bit)
 
-        print(bit_list)
+        print(bit_list, len(bit_list), len(data))
         return bit_list
 
     def write(self, command):
@@ -94,5 +94,4 @@ if __name__ == '__main__':
     port.write(b'QPIWS')
     print(port.readline())
 
-    print(port.readline())
     port.close()
