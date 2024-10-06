@@ -1,4 +1,6 @@
 {
   "name": "serial port",
-  "port": "/dev/tty."
+  "port": "/dev/ttyUSB0",
+  "baudrate": 2400,
+  "timeout": 3
 }
