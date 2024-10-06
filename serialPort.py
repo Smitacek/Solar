@@ -48,7 +48,24 @@ class SerialPort:
         return self._serial_port
 
     def readline(self):
-        return self._serial_port.readline()
+        return self.bit_convert(self._serial_port.readline())
+
+    @staticmethod
+    def bit_convert(data):
+
+        # Seznam, do kterého uložíme všechny bity
+        bit_list = []
+
+        # Pro každý byte
+        for byte in data:
+            # Pro každý bit v byte (od nejvyššího k nejnižšímu)
+            for i in range(8):
+                # Použijeme bitový posun a AND k extrakci každého bitu
+                bit = (byte >> (7 - i)) & 1
+                bit_list.append(bit)
+
+        print(bit_list)
+        return bit_list
 
     def write(self, command):
         self._serial_port.write(self.MESSAGE + b'\r')
@@ -76,5 +93,6 @@ if __name__ == '__main__':
     port.open()
     port.write(b'QPIWS')
     print(port.readline())
+
     print(port.readline())
     port.close()
