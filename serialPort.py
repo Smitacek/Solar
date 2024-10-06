@@ -1,11 +1,8 @@
 import time
 
 import serial
-import json
-from serial.tools.list_ports import comports
 from serial import Serial
 
-from datetime import datetime
 
 
 class SerialPort:
@@ -63,7 +60,7 @@ class SerialPort:
                 # Použijeme bitový posun a AND k extrakci každého bitu
                 bit = (byte >> (7 - i)) & 1
                 bit_list.append(bit)
-
+        print(data)
         print(bit_list, len(bit_list), len(data))
         return bit_list
 
@@ -83,6 +80,18 @@ class SerialPort:
             print(f'Unable to open serial port: \n{str(e)}')
 
 
+class RS232Protocol:
+
+    def __init__(self, question, data):
+        self._question = question
+        self._data = data
+
+    def _convert_int_number(self, bit_list, pointer, unit):
+        binary_string = ''.join(map(str, bit_list))
+        integer_value = int(binary_string, 2)
+        integer_value = round(integer_value/10**pointer,pointer)
+        print(integer_value)
+
 if __name__ == '__main__':
     port = SerialPort({
         "name": "serial port",
@@ -91,7 +100,7 @@ if __name__ == '__main__':
         "timeout": 3
     })
     port.open()
-    port.write(b'QPIWS')
+    port.write(b'QPIGS')
     print(port.readline())
 
     port.close()
