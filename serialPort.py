@@ -46,7 +46,7 @@ class SerialPort:
         return self._serial_port
 
     def readline(self):
-        return self._serial_port.readline().decode()
+        return self._serial_port.readline().decode('utf-8', errors='ignore')
 
     def write(self, command):
         self._serial_port.write(command + b'\r')
