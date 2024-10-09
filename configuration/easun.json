@@ -1,0 +1,88 @@
+{
+  "QPIGS": {
+    "grid_voltage": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "grid_power": {
+      "unit": "W",
+      "sign": "True"
+    },
+    "grid_frequency": {
+      "unit": "Hz",
+      "sign": "False"
+    },
+    "grid_current": {
+      "unit": "A",
+      "sign": "True"
+    },
+    "ac_output_voltage": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "ac_output_power": {
+      "unit": "W",
+      "sign": "False"
+    },
+    "ac_output_frequency": {
+      "unit": "Hz",
+      "sign": "False"
+    },
+    "ac_output_current": {
+      "unit": "A",
+      "sign": "False"
+    },
+    "output_load_percent": {
+      "unit": "%",
+      "sign": "False"
+    },
+    "p_bus_voltage": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "s_bus_voltage": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "p_battery_voltage": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "n_battery_voltage": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "battery_capacity": {
+      "unit": "%",
+      "sign": "False"
+    },
+    "pv_input_power_1": {
+      "unit": "W",
+      "sign": "False"
+    },
+    "pv_input_power_2": {
+      "unit": "W",
+      "sign": "False"
+    },
+    "pv_input_power_3": {
+      "unit": "W",
+      "sign": "False (used by other model)"
+    },
+    "pv_input_voltage_1": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "pv_input_voltage_2": {
+      "unit": "V",
+      "sign": "False (used by other model)"
+    },
+    "pv_input_voltage_3": {
+      "unit": "V",
+      "sign": "False (used by other model)"
+    },
+    "max_temperature_of_detecting_pointers": {
+      "unit": "°C",
+      "sign": "False"
+    }
+  }
+}

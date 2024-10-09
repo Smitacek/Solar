@@ -13,7 +13,7 @@ class SerialPort:
               'mark': serial.PARITY_MARK, 'space': serial.PARITY_SPACE}
     STOP_BIT = {'1': serial.STOPBITS_ONE, '1.5': serial.STOPBITS_ONE_POINT_FIVE, '2': serial.STOPBITS_TWO}
     BITE_SIZE = {'5': serial.FIVEBITS, '6': serial.SIXBITS, '7': serial.SEVENBITS, '8': serial.EIGHTBITS}
-    MESSAGE = b'QPIWS'
+    MESSAGE = b'QPIGS'
 
     def __init__(self, config_file):
         self._config_file = config_file
