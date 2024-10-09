@@ -1,3 +1,4 @@
+import json
 import time
 
 import serial
@@ -45,7 +46,7 @@ class SerialPort:
         return self._serial_port
 
     def readline(self):
-        return self._serial_port.readline()
+        return self._serial_port.readline().decode()
 
     def write(self, command):
         self._serial_port.write(command + b'\r')
@@ -75,6 +76,20 @@ class RS232Protocol:
         integer_value = round(integer_value/10**pointer,pointer)
         print(integer_value)
 
+
+class DecoderQ:
+    def __init__(self, inverter_path):
+        self.open_file_inverter(inverter_path)
+        self._inverter = {}
+
+    def open_file_inverter(self, fila_path) -> None:
+        with open(fila_path, 'r') as file:
+            self._inverter = json.loads(file.read())
+
+    def _split(self):
+        raise NotImplementedError
+
+
 if __name__ == '__main__':
     port = SerialPort({
         "name": "serial port",
@@ -82,6 +97,7 @@ if __name__ == '__main__':
         "baudrate": 2400,
         "timeout": 3
     })
+    decoder = DecoderQ('configuration/easun.json')
     port.open()
     port.write(b'QDI')
     print(port.readline())
