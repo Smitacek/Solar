@@ -48,7 +48,7 @@ class SerialPort:
         return self._serial_port.readline()
 
     def write(self, command):
-        self._serial_port.write(self.MESSAGE + b'\r')
+        self._serial_port.write(command + b'\r')
 
     def close(self):
         self._serial_port.close()
