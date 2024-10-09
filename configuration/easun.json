@@ -84,5 +84,80 @@
       "unit": "°C",
       "sign": "False"
     }
+  },
+  "QDI": {
+    "grid_output_voltage_high_loss_point": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "grid_output_voltage_low_loss_point": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "grid_output_frequency_high_loss_point": {
+      "unit": "Hz",
+      "sign": "False"
+    },
+    "grid_output_frequency_low_loss_point": {
+      "unit": "Hz",
+      "sign": "False"
+    },
+    "grid_input_voltage_high_loss_point": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "grid_input_voltage_low_loss_point": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "grid_input_frequency_high_loss_point": {
+      "unit": "Hz",
+      "sign": "False"
+    },
+    "grid_input_frequency_low_loss_point": {
+      "unit": "Hz",
+      "sign": "False"
+    },
+    "upper_limit_pv_input_voltage": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "lowest_limit_pv_input_voltage": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "pv_input_high_voltage_for_mppt": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "pv_input_low_voltage_for_mppt": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "max_output_power": {
+      "unit": "W",
+      "sign": "False"
+    },
+    "long_time_grid_average_voltage_high_loss_point": {
+      "unit": "V",
+      "sign": "False"
+    },
+    "lcd_sleep_time": {
+      "unit": "30s",
+      "sign": "False"
+    },
+    "battery_piece_number": {
+      "unit": "None",
+      "sign": "False"
+    },
+    "battery_total_capacity": {
+      "unit": "Ah",
+      "sign": "False (used by other model)"
+    },
+    "charger_current": {
+      "unit": "A",
+      "sign": "False (used by other model)"
+    }
   }
+
 }

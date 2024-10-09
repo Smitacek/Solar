@@ -45,24 +45,7 @@ class SerialPort:
         return self._serial_port
 
     def readline(self):
-        return self.bit_convert(self._serial_port.readline())
-
-    @staticmethod
-    def bit_convert(data):
-
-        # Seznam, do kterého uložíme všechny bity
-        bit_list = []
-
-        # Pro každý byte
-        for byte in data:
-            # Pro každý bit v byte (od nejvyššího k nejnižšímu)
-            for i in range(8):
-                # Použijeme bitový posun a AND k extrakci každého bitu
-                bit = (byte >> (7 - i)) & 1
-                bit_list.append(bit)
-        print(data)
-        print(bit_list, len(bit_list), len(data))
-        return bit_list
+        return self._serial_port.readline()
 
     def write(self, command):
         self._serial_port.write(self.MESSAGE + b'\r')
@@ -96,11 +79,11 @@ if __name__ == '__main__':
     port = SerialPort({
         "name": "serial port",
         "port": "/dev/ttyUSB0",
-        "baudrate": 9600,
+        "baudrate": 2400,
         "timeout": 3
     })
     port.open()
-    port.write(b'QPIGS')
+    port.write(b'QDI')
     print(port.readline())
 
     port.close()
