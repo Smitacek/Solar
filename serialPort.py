@@ -176,7 +176,7 @@ if __name__ == '__main__':
     #decoder.convert('QDI','230.0 50.0 0030 44.0 54.0 56.4 46.0 60 0 0 2 0 0 0 0 0 1 1 1 0 1 0 54.0 0 1 224')
     port = SerialPort({
         "name": "serial port",
-        "port": "/dev/hidraw0",
+        "port": "/dev/ttyUSB0",
         "baudrate": 2400,
         "timeout": 3
     })
