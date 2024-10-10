@@ -168,7 +168,7 @@ if __name__ == '__main__':
     port = SerialPort({
         "name": "serial port",
         "port": "/dev/ttyUSB0",
-        "baudrate": 9600,
+        "baudrate": 2400,
         "timeout": 3
     })
 
