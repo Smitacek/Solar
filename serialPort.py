@@ -117,8 +117,8 @@ class DecoderQ:
 
 
 if __name__ == '__main__':
-    decoder = DecoderQ('configuration/easun.json')
-    decoder.convert('QDI','230.0 50.0 0030 44.0 54.0 56.4 46.0 60 0 0 2 0 0 0 0 0 1 1 1 0 1 0 54.0 0 1 224')
+    #decoder = DecoderQ('configuration/easun.json')
+    #decoder.convert('QDI','230.0 50.0 0030 44.0 54.0 56.4 46.0 60 0 0 2 0 0 0 0 0 1 1 1 0 1 0 54.0 0 1 224')
     port = SerialPort({
         "name": "serial port",
         "port": "/dev/ttyUSB0",
@@ -127,13 +127,13 @@ if __name__ == '__main__':
     })
 
     port.open()
-    port.write(b'QDI')
+    #port.write(b'QDI')
     print(port.readline())
     for task in queries_and_responses:
         print(task[0])
 
         port.write(task[0])
-        print(task[1])
+        #print(task[1])
         print(port.readline())
         time.sleep(0.2)
 
