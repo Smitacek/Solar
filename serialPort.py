@@ -34,7 +34,34 @@ queries_and_responses = [
     [b'QCHGS', 'AA.A BB.B CC.C DD.D'],
     [b'QVFTR', 'HHH.H MMM.M LLL.L NNN.N ZZ.Z XX.X WW.W YY.Y AAA BBB'],
     [b'QPIHF', 'KK YYYYMMDDHHMMSS AAA.A BBB.B CCC.C DDD.D EEE.E FFF.F GGG.G HHH.H III.I JJ.J CKKK.K LLL MMM.M NNN.N OO.O PPP.P QQQ.Q <bn><cr>'],
-    [b'QPICF', 'KK NN']
+    [b'QPICF', 'KK NN'],
+    [b'QPI', 'N/A'],
+    [b'QDI', 'N/A'],
+    [b'QFLAG', 'N/A'],
+    [b'QMN', 'N/A'],
+    [b'QMODI', 'N/A'],
+    [b'QPIGS', 'N/A'],
+    [b'QPIRI', 'N/A'],
+    [b'QPIWS', 'N/A'],
+    [b'QT', 'N/A'],
+    [b'QPGS0', 'N/A'],
+    [b'QPGS1', 'N/A'],
+    [b'QPGS2', 'N/A'],
+    [b'QPIGS2h-', 'N/A'],
+    [b'QP2GS0', 'N/A'],
+    [b'QP2GS1', 'N/A'],
+    [b'^P005PIq', 'N/A'],
+    [b'^P005GSX', 'N/A'],
+    [b'^P006MOD', 'N/A'],
+    [b'^P003PI', 'N/A'],
+    [b'^P004MOD', 'N/A'],
+    [b'^P005FLAG', 'N/A'],
+    [b'QPI', 'N/A'],
+    [b'QMOD', 'N/A'],
+    [b'QPIGS', 'N/A'],
+    [b'QPIRI', 'N/A'],
+    [b'QMOD', 'N/A']
+
 ]
 
 
@@ -154,7 +181,7 @@ if __name__ == '__main__':
         port.write(task[0])
         #print(task[1])
         print(port.readline())
-        time.sleep(0.2)
+        time.sleep(0.05)
 
 
     port.close()
