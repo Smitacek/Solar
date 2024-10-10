@@ -144,9 +144,9 @@ if __name__ == '__main__':
         "timeout": 3
     })
 
-    # port.open()
-    # port.write(b'QDI')
-    # print(port.readline())
+    port.open()
+    port.write(b'QDI')
+    print(port.readline())
     for task in queries_and_responses:
         print(task[0])
         command = b'{task[0]}'
