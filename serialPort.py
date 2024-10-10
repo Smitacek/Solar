@@ -5,36 +5,18 @@ import serial
 from serial import Serial
 
 queries_and_responses = [
-    [b'QPI', 'PI<NN>'],
-    [b'QID', 'ABCDEEFFGXXXXX'],
-    [b'QVFW', 'VERFW:<NNNNN.NN>'],
-    [b'QVFW2', 'VERFW2:<NNNNN.NN>'],
-    [b'QMD', 'TTTTTTTTTTTTTTTWWWWWWW KK P/P MMM NNN RR BB.B'],
-    [b'QPIRI', 'BBB.B FF.F III.I EEE.E DDD.D AA.A GGG.G R MM T'],
-    [b'QPIGS', 'MMM.M CBBBBB HH.H CZZZ.Z LLL.L MMMMM NN.N QQQ.Q DDD KKK.K VVV.V SSS.S RRR.R XXX PPPPP EEEEE OOOOO UUU.U WWW.W YYY.Y TTT.T b7b6b5b4b3b2b1b0a0a1'],
-    [b'QMOD', 'M'],
-    [b'QPIWS', 'a0a1.....a62a127'],
-    [b'QFLAG', 'ExxxDxxx'],
-    [b'QT', 'YYYYMMDDHHMMSS'],
-    [b'QET', 'NNNNNNNN'],
-    [b'QEY', 'NNNNNNNN'],
-    [b'QEM', 'NNNNNN'],
-    [b'QED', 'NNNNNN'],
-    [b'QEH', 'NNNNN'],
-    [b'QGOV', 'HHH.H LLL.L'],
-    [b'QGOF', 'FF.F GG.G'],
-    [b'QOPMP', 'LLLLL'],
-    [b'QMPPTV', 'HHH LLL'],
-    [b'QPVIPV', 'HHH LLL'],
-    [b'QLST', 'LL'],
-    [b'QTPR', 'LLL.L SSS.S TTT.T'],
-    [b'QDI2', 'HH.H LL.L NNN'],
-    [b'QDI', 'BBB.B CCC.C DD.D EE.E FFF.F GGG.G HH.H II.I JJJ KKK LLL MMM NNNNN OOO PP QQ RRR SS'],
-    [b'QGLTV', 'HHH LLL'],
-    [b'QCHGS', 'AA.A BB.B CC.C DD.D'],
-    [b'QVFTR', 'HHH.H MMM.M LLL.L NNN.N ZZ.Z XX.X WW.W YY.Y AAA BBB'],
-    [b'QPIHF', 'KK YYYYMMDDHHMMSS AAA.A BBB.B CCC.C DDD.D EEE.E FFF.F GGG.G HHH.H III.I JJ.J CKKK.K LLL MMM.M NNN.N OO.O PPP.P QQQ.Q <bn><cr>'],
-    [b'QPICF', 'KK NN']
+    [b'QPI', 'N/A'],
+    [b'QDI', 'N/A'],
+    [b'QFLAG', 'N/A'],
+    [b'QMN', 'N/A'],
+    [b'QMODI', 'N/A'],
+    [b'QPIGS', 'N/A'],
+    [b'QPIRI', 'N/A'],
+    [b'QPIWS', 'N/A'],
+    [b'QT', 'N/A'],
+    [b'QPGS0', 'N/A'],
+    [b'QPGS1', 'N/A'],
+    [b'QPGS2', 'N/A']
 ]
 
 class SerialPort:
